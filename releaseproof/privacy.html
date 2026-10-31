@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ReleaseProof privacy policy · Nightjar Labs</title>
+<style>
+  :root { color-scheme: light dark; --fg: #1d1d1f; --muted: #5f6368; --bg: #fbfbfa; --line: #e3e3e0; --accent: #6b4f2a; }
+  @media (prefers-color-scheme: dark) { :root { --fg: #e8e6e3; --muted: #a09d98; --bg: #141412; --line: #2c2b28; --accent: #d4b483; } }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 680px; margin: 0 auto; padding: 72px 24px 48px; }
+  h1 { font-size: 1.8rem; margin: 0 0 4px; }
+  h2 { font-size: 1.05rem; margin: 32px 0 8px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+  p, li { margin: 0 0 10px; }
+  a { color: var(--accent); }
+  .tag { color: var(--muted); margin-bottom: 24px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>ReleaseProof privacy policy</h1>
+  <p class="tag">Effective 31 October 2026 · Nightjar Labs</p>
+
+  <h2>What the app stores</h2>
+  <p>ReleaseProof is a Jira issue panel built on Atlassian Forge. For each Jira issue where it is used, it stores:</p>
+  <ul>
+    <li>the release policy you enter (identifiers, thresholds, slice names);</li>
+    <li>the prediction CSV you import (row IDs, slice labels and numeric values);</li>
+    <li>approval records: the Atlassian account ID of the approver, the time, and the fingerprint they approved.</li>
+  </ul>
+  <p>Do not import personal or sensitive data in prediction files. The app is meant for model-evaluation numbers.</p>
+
+  <h2>Where it is stored</h2>
+  <p>All data is kept in Forge storage on Atlassian's platform, scoped to your site installation and keyed by Jira issue. The app requests only the <code>read:jira-work</code> and <code>storage:app</code> permissions. It makes no requests outside Atlassian, uses no analytics or third-party services, and Nightjar Labs does not copy app data to its own systems.</p>
+
+  <h2>Access and deletion</h2>
+  <p>Anyone who can view the Jira issue can view its release state; editing and approval require Jira edit permission on that issue. Uninstalling the app removes access to its data; Atlassian's Forge data-retention rules apply to stored data after uninstall.</p>
+
+  <h2>Contact</h2>
+  <p>Questions: <a href="mailto:labsnightjar@gmail.com">labsnightjar@gmail.com</a>.</p>
+</main>
+</body>
+</html>
