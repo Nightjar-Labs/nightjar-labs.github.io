@@ -4,7 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nightjar Labs</title>
-<meta name="description" content="Nightjar Labs is a small software studio building developer tools and data utilities with AI-assisted development.">
+<meta name="description" content="Nightjar Labs is a small software studio. We build focused tools for developer and data teams, and every one of them is live.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nightjar-labs.github.io/">
+<meta property="og:title" content="Nightjar Labs">
+<meta property="og:description" content="A small software studio. Focused tools for developer and data teams, all live: an Apify Actor, a Jira app, a GitLab release gate and a preparedness planner.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%236b4f2a'/%3E%3Ctext x='16' y='23' font-family='system-ui,sans-serif' font-size='20' font-weight='700' text-anchor='middle' fill='%23fbfbfa'%3EN%3C/text%3E%3C/svg%3E">
 <style>
   :root { color-scheme: light dark; --fg: #1d1d1f; --muted: #5f6368; --bg: #fbfbfa; --line: #e3e3e0; --accent: #6b4f2a; }
   @media (prefers-color-scheme: dark) { :root { --fg: #e8e6e3; --muted: #a09d98; --bg: #141412; --line: #2c2b28; --accent: #d4b483; } }
@@ -12,33 +17,60 @@
   body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
   main { max-width: 680px; margin: 0 auto; padding: 72px 24px 48px; }
   h1 { font-size: 2rem; margin: 0 0 4px; letter-spacing: -0.01em; }
-  h2 { font-size: 1.05rem; margin: 40px 0 8px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+  h2 { font-size: 1.05rem; margin: 44px 0 4px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+  h3 { font-size: 1.1rem; margin: 0; }
   p { margin: 0 0 12px; }
-  .tag { color: var(--muted); margin-bottom: 32px; }
-  ul { padding-left: 1.1em; margin: 0; }
-  li { margin-bottom: 10px; }
+  .tag { color: var(--muted); margin-bottom: 8px; }
+  .note { color: var(--muted); font-size: 0.95rem; }
   a { color: var(--accent); }
-  .status { font-size: 0.85rem; color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 1px 6px; margin-left: 6px; white-space: nowrap; }
+  .item { padding: 18px 0; border-bottom: 1px solid var(--line); }
+  .item p { margin: 4px 0 6px; }
+  .status { font-size: 0.8rem; font-weight: 400; color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 1px 6px; margin-left: 8px; white-space: nowrap; vertical-align: 2px; }
+  .links { font-size: 0.95rem; }
+  .links a { margin-right: 14px; }
   footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
 </style>
 </head>
 <body>
 <main>
   <h1>Nightjar Labs</h1>
-  <p class="tag">A small software studio. We build focused developer tools and data utilities.</p>
+  <p class="tag">A small software studio. We build focused tools for developer and data teams, and ship them live.</p>
 
-  <h2>What we make</h2>
-  <ul>
-    <li><strong>Docs Change Feed for RAG</strong><span class="status">in development</span><br>
-      Watches a public documentation site and emits only the sections that changed since the last run, as clean Markdown ready to re-embed. Coming to the Apify Store.</li>
-  </ul>
+  <h2>Products</h2>
+
+  <div class="item">
+    <h3>Docs Change Feed for RAG<span class="status">live on the Apify Store</span></h3>
+    <p>Watches public documentation sites and emits only the sections that changed since the last run, as clean Markdown ready to re-embed, so a RAG index stays current without re-embedding everything. $2 per 1,000 pages checked.</p>
+    <p class="links"><a href="https://apify.com/nightjar-labs/docs-change-feed">Try it on Apify</a></p>
+  </div>
+
+  <div class="item">
+    <h3>ReleaseProof<span class="status">Jira app</span></h3>
+    <p>A release-evidence panel for ML teams. It recomputes baseline and candidate error from the prediction file itself, checks every required slice, and ties approval to the exact policy and evidence reviewed. Change either one and the approval goes stale.</p>
+    <p class="links"><a href="https://developer.atlassian.com/console/install/997b98dc-1536-4d87-ab16-e9a6c0ab2c2c?signature=AYABeDE6s4i0G0PWDdk2DjuT4eYAAAADAAdhd3Mta21zAEthcm46YXdzOmttczp1cy13ZXN0LTI6NzA5NTg3ODM1MjQzOmtleS83MDVlZDY3MC1mNTdjLTQxYjUtOWY5Yi1lM2YyZGNjMTQ2ZTcAuAECAQB4CxqLTo9l4lqXuFjNim1xJM%2Bp%2F3TVP9xHS2BrU5DRRucBKEkiRQVocg4OTW%2F7gaFbzgAAAH4wfAYJKoZIhvcNAQcGoG8wbQIBADBoBgkqhkiG9w0BBwEwHgYJYIZIAWUDBAEuMBEEDGsYOXTF42ydHp0x%2BgIBEIA7I1ZwSmrTzMs0h0B6xt5mI3adJsaQel7dgoTXKLIjaXD5eOZTEwxmbNmtWvnNrq%2BHkdTO39xBeggnvn8AB2F3cy1rbXMAS2Fybjphd3M6a21zOmV1LXdlc3QtMTo3MDk1ODc4MzUyNDM6a2V5LzQ2MzBjZTZiLTAwYzMtNGRlMi04NzdiLTYyN2UyMDYwZTVjYwC4AQICAHi9bVMAkme4qVQX1fQHo6ePw3H40A7cGfz7yrmSfBWMXgHnmWqsV%2B5a2QwQx%2FUGGYJXAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMR%2F8i79xiQRE9IP4iAgEQgDuwdsNUhQQ2Bj2rr4yDtNJVa%2BQ2d4wjGq3zNOmlqNlwVMGlUusdB8VhPkp0%2B7M%2BimWvIDwDIp3ASWo4sQAHYXdzLWttcwBLYXJuOmF3czprbXM6dXMtZWFzdC0xOjcwOTU4NzgzNTI0MzprZXkvNmMxMjBiYTAtNGNkNS00OTg1LWI4MmUtNDBhMDQ5NTJjYzU3ALgBAgIAeDYASx0XCjkny4iLV6vz%2BKtEGSGT6kdt0QRpkn6D%2FlVEAbEXw7YXJJiTC4tH%2FKFKyowAAAB%2BMHwGCSqGSIb3DQEHBqBvMG0CAQAwaAYJKoZIhvcNAQcBMB4GCWCGSAFlAwQBLjARBAznbmBB4SYPAGNw9mcCARCAO4Qrbzribi6cIpK9OcenLKWa4d9nmneNPLqcBXRi%2FGq2QXPbuaFkH7Y5lg3lGtnoLhoUASymgG814fCzAgAAAAAMAAAQAAAAAAAAAAAAAAAAAAU805u57YwfLvu1k9WzozP%2F%2F%2F%2F%2FAAAAAQAAAAAAAAAAAAAAAQAAADK59QIbEPwfRr4JNDrwoXHrJSTm4y%2F5fxo143O4z27P1QsIbYMCVJbQKZRfkcpzM6O6LYcD762%2BIUoFUY08St0WjvQ%3D&amp;product=jira">Install in Jira</a><a href="releaseproof/privacy.html">Privacy</a><a href="releaseproof/terms.html">Terms</a></p>
+  </div>
+
+  <h2>Recent builds</h2>
+  <p class="note">Built for hackathons, and still running.</p>
+
+  <div class="item">
+    <h3>Nightjar Gate<span class="status">GitLab · Google Cloud</span></h3>
+    <p>A release gate that ties each release to the exact commit, pipeline, container digest, staging revision and approving human. In its first real run the gate blocked a release on 109 scan findings, and the GitLab Duo agent escalated with a fix plan instead of patching outside its scope.</p>
+    <p class="links"><a href="https://youtu.be/UXhGRlA6Hb0">Video (2:32)</a><a href="https://nightjar-gate-932458634971.europe-west1.run.app/policy">Live service</a><a href="https://gitlab.com/gitlab-ai-hackathon/transcend-october-2026/43448400/showcase">Source</a></p>
+  </div>
+
+  <div class="item">
+    <h3>Front Porch<span class="status">Qloo · FEMA · Wikidata</span></h3>
+    <p>Helps county emergency managers pick who should carry preparedness messages before storm season: local teams, venues and organisations whose audiences live in the highest-risk counties, with every candidate checked against Qloo, FEMA and Wikidata.</p>
+    <p class="links"><a href="https://youtu.be/imF3Ld1hoKg">Video (2:32)</a><a href="https://frontporch-556860386135.europe-west1.run.app/?state=AL&amp;hazard=hurricane">Live demo</a><a href="https://github.com/hhyurdagul/front-porch">Source</a></p>
+  </div>
 
   <h2>How we work</h2>
   <p>We build with AI coding agents. A reviewer checks every release before it ships, and our tools do one job and document their limits.</p>
   <p>We don't collect personal data, scrape behind logins, or evade anti-bot measures.</p>
 
   <h2>Contact</h2>
-  <p><a href="mailto:labsnightjar@gmail.com">labsnightjar@gmail.com</a> · <a href="https://github.com/Nightjar-Labs">GitHub</a></p>
+  <p><a href="mailto:labsnightjar@gmail.com">labsnightjar@gmail.com</a></p>
 
   <footer>Nightjar Labs is an independent online studio.</footer>
 </main>
