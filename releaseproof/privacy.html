@@ -19,7 +19,7 @@
 <body>
 <main>
   <h1>ReleaseProof privacy policy</h1>
-  <p class="tag">Effective 31 October 2026 · Nightjar Labs</p>
+  <p class="tag">Effective 31 October 2026 · updated 5 November 2026 · Nightjar Labs</p>
 
   <h2>What the app stores</h2>
   <p>ReleaseProof is a Jira issue panel built on Atlassian Forge. For each Jira issue where it is used, it stores:</p>
@@ -31,7 +31,7 @@
   <p>Do not import personal or sensitive data in prediction files. The app is meant for model-evaluation numbers.</p>
 
   <h2>Where it is stored</h2>
-  <p>All data is kept in Forge storage on Atlassian's platform, scoped to your site installation and keyed by Jira issue. The app requests only the <code>read:jira-work</code> and <code>storage:app</code> permissions. It makes no requests outside Atlassian, uses no analytics or third-party services, and Nightjar Labs does not copy app data to its own systems.</p>
+  <p>All data is kept in Forge storage on Atlassian's platform, scoped to your site installation and keyed by Jira issue. The app requests only the <code>read:jira-work</code>, <code>read:jira-user</code> and <code>storage:app</code> permissions. The <code>read:jira-user</code> permission is used only to look up the approver's display name from Jira when the panel is shown (or evidence is exported); the name is never stored by the app. It makes no requests outside Atlassian, uses no analytics or third-party services, and Nightjar Labs does not copy app data to its own systems.</p>
 
   <h2>Access and deletion</h2>
   <p>Anyone who can view the Jira issue can view its release state; editing and approval require Jira edit permission on that issue. Uninstalling the app removes access to its data; Atlassian's Forge data-retention rules apply to stored data after uninstall.</p>
